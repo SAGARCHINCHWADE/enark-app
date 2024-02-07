@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Component1 from "../../Component/Component1/Component1";
+import Component1 from "../Component1/Component1";
 import './Main.css'
 
 
