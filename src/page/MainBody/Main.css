@@ -1,0 +1,8 @@
+.main_container {
+  background-color: rgb(233, 204, 204);
+
+  display: flex;
+  flex-grow: 1;
+  margin: 8px 3px;
+  border-radius: 5px;
+}

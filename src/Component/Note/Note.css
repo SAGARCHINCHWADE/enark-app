@@ -1,0 +1,15 @@
+.Notes_gather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.note_ele {
+  background-color: bisque;
+  padding: 5px 20px;
+  margin: 5px;
+  box-shadow: 10px 5px 5px rgb(182, 180, 180);
+  min-width: 20%;
+  display: flex;
+  justify-content: space-between;
+}

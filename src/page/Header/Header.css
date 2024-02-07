@@ -1,0 +1,35 @@
+.Nav_container {
+  background-color: rgb(246, 165, 165);
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 1px;
+  width: 100%;
+  color:white;
+  padding:0;
+  box-shadow: 10px 5px 5px rgb(154, 126, 126);
+
+  
+}
+.Nav_components {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.Nav_ele {
+  margin: 5px;
+  background-color: rgb(195, 125, 125);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+ margin: 0 10px;
+ padding:0 10px
+}
+
+.header{
+  font-size:larger;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
