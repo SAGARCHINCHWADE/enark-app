@@ -6,8 +6,8 @@ const Note = ({ ele, removeCard }) => {
     return (
       <div className="Notes_gather">
         <div key={ele.newCardId} className="note_ele">
-          {ele.message ? (
-            <p>MODULE {ele.newCardId % 100}</p>
+          {ele.Message ? (
+            <p> {ele.Message }</p>
           ) : (
             <p>MODULE {ele.newCardId % 100}</p>
           )}
