@@ -6,7 +6,7 @@ import Note from "../../Component/Note/Note";
 import { useState } from "react";
 import PopupModel from "../../Component/PopupModel/PopupModel";
 
-const Component1 = () => {
+const Step2 = () => {
   const [showModal, setShowModal] = useState(false);
   const [cards, setCards] = useState([]);
 
@@ -52,5 +52,4 @@ const Component1 = () => {
   );
 };
 
-export default Component1;
- 
+export default Step2;
