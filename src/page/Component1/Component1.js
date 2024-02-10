@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import Buttons from "../../Component/Button/Button";
 import "./Component1.css";
 import logo from "./../../assets/set.svg";
 import Note from "../../Component/Note/Note";
-import { useState } from "react";
 import PopupModel from "../../Component/PopupModel/PopupModel";
 
 const Component1 = () => {
   const [showModal, setShowModal] = useState(false);
   const [cards, setCards] = useState([]);
 
+
+
   const addCard = () => {
     const newCardId = Date.now();
+    console.log(newCardId,'time')
     setCards([...cards, { newCardId }]);
   };
 
@@ -20,7 +22,8 @@ const Component1 = () => {
     const RemArr = cards.filter((cardId) => cardId !== id);
     setCards(RemArr);
   };
-  console.log(cards);
+  
+
 
   const onclose = () => {
     console.log(" click on closes mode");
@@ -53,4 +56,3 @@ const Component1 = () => {
 };
 
 export default Component1;
- 

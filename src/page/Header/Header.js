@@ -12,7 +12,7 @@ const Header = () => {
       <div className="Nav_components">
         <div onClick={()=>navigate('/')} className="Nav_ele"> <p> STEP 1 </p></div>
         <div onClick={()=>navigate('/step2')} className="Nav_ele"> <p> STEP 2 </p></div>
-        <div className="Nav_ele"> <p> STEP 3  </p></div>
+        <div onClick={()=>navigate('/step3')} className="Nav_ele"> <p> STEP 3  </p></div>
       </div>
     </div>
   );

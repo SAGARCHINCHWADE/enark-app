@@ -1,10 +1,10 @@
-import './App.css';
-import Layout from './Layout/Layout';
-
+import "./App.css";
+import Layout from "./Layout/Layout";
+import MyContext from "./assets/MyContext/MyContext";
 function App() {
   return (
     <div className="App">
-     <Layout/>
+      <Layout />
     </div>
   );
 }
