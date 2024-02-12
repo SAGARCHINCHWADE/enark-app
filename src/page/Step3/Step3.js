@@ -6,14 +6,26 @@ import Pagenation from "../../Component/Pagenation/Pagenation";
 const Step3 = () => {
   const [Timer, setTimer] = useState(0);
   const [Country, setCountry] = useState([]);
+  const [Loading, setLoading] = useState(false);
+  const [Error, setError] = useState(false);
 
   const sendApiRequest = async () => {
-    const responce = await fetch(
-      "https://api.knowmee.co/api/v1/master/get-country-list"
-    );
-    const data = await responce.json();
-    setCountry(data.responseData);
-    console.log(Country, "contry");
+    setLoading(true);
+    try {
+      const response = await fetch(
+        "https://api.knowmee.co/api/v1/master/get-country-list"
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      setCountry(data.responseData);
+      setLoading(false);
+    } catch (error) {
+      console.error("There was a problem fetching the data:", error);
+      setError("Error fetching data. Please try again later.");
+      setLoading(false);
+    }
   };
 
   const handleClick = () => {
@@ -36,7 +48,7 @@ const Step3 = () => {
       />
       <Buttons onClick={handleClick}>START TIMER</Buttons>
 
-      {Country.length ? <Pagenation Country={Country} /> : null}
+      {Country.length ? <Pagenation Country={Country} Loading={Loading} Error={Error}/> : null}
     </div>
   );
 };
